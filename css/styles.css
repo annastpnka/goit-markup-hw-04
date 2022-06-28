@@ -73,6 +73,13 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.logo-link {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  font-family: var(--logo-font);
+  margin-right: 92px;
+}
 
 /* ====== END COMPONENTS ====== */
 /* ====== START HERADER ====== */
@@ -85,12 +92,7 @@ img {
   display: flex;
   align-items: center;
 }
-.logo-link {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  font-family: var(--logo-font);
-  margin-right: 92px;
+.logo-main {
   padding: 25px 0px;
 }
 .logo-link > span {
@@ -103,7 +105,7 @@ img {
 .main-nav-link:focus {
   color: var(--main-color);
 }
-.main-nav-item {
+.main-nav-link {
   padding: 32px 0px;
 }
 .main-nav-list {
@@ -210,7 +212,7 @@ main .hero {
   display: flex;
   justify-content: space-between;
 }
-.intro-icons-item {
+.intro-img-box {
   display: flex;
   width: 270px;
   height: 120px;
@@ -221,9 +223,6 @@ main .hero {
 }
 .intro-icons {
   fill: #212121;
-}
-.intro-list {
-  display: flex;
 }
 .intro-subtitle {
   font-weight: 700;
@@ -236,7 +235,7 @@ main .hero {
 .intro-item {
   max-width: 270px;
 }
-.intro-item:not(:last-child) {
+.intro-icons-item:not(:last-child) {
   margin-right: 30px;
 }
 .list-intro-img {
@@ -291,8 +290,10 @@ main .hero {
 .command-icon-list {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.command-icon-item {
+.command-icon-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,16 +302,15 @@ main .hero {
   width: 44px;
   height: 44px;
 }
-.command-icon-item:hover,
-.command-icon-item:focus {
+.command-icon-link:hover,
+.command-icon-link:focus {
   background-color: var(--main-color);
   cursor: pointer;
 }
-.command-icon-item:hover .command-icon,
-.command-icon-item:focus .command-icon {
+.command-icon-link:hover .command-icon,
+.command-icon-link:focus .command-icon {
   fill: #fff;
 }
-
 .command-icon {
   fill: #afb1b8;
 }
@@ -319,12 +319,15 @@ main .hero {
 /* ====== START CLIENTS ====== */
 .clients-icon-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 .title-clients {
   margin-bottom: 50px;
 }
 .clients-item {
+  display: flex;
+}
+.clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,14 +339,13 @@ main .hero {
 .clients-icon {
   fill: #afb1b8;
 }
-.clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--main-color);
 }
-.clients-item:hover,
-.clients-item:focus {
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--main-color);
-  cursor: pointer;
 }
 
 /* ====== END CLIENTS ====== */
@@ -388,7 +390,7 @@ main .hero {
 .address-item:not(:first-child) {
   margin-top: 10px;
 }
-.footer-title {
+.footer-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -402,6 +404,9 @@ main .hero {
 }
 .footer-icon-item {
   display: flex;
+}
+.footer-icon-link {
+  display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
@@ -412,8 +417,8 @@ main .hero {
 .footer-icon-item:not(:last-child) {
   margin-right: 10px;
 }
-.footer-icon-item:hover,
-.footer-icon-item:focus {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
   cursor: pointer;
   background-color: var(--main-color);
 }
@@ -479,9 +484,9 @@ main .hero {
 .portfolio-img-item {
   background-color: #fff;
 }
-.portfolio-img-item:hover,
-.portfolio-img-item:focus {
-  cursor: pointer;
+.portfolio-img-link:hover,
+.portfolio-img-link:focus {
+  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
